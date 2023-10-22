@@ -1,0 +1,32 @@
+image {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    right:50px;
+}
+
+#name{
+
+    font-size: 28px;
+    font-weight: 500;
+    font-style: italic;
+
+}
+#price{
+
+    position: relative;
+    left: 50px;
+    color: red;
+    font-size: 22px;
+}
+
+#description{
+    font-size: 18px;
+    position: relative;
+    top: 20px;
+}
+
+#card{
+    position: relative;
+    left: 500px;
+}
