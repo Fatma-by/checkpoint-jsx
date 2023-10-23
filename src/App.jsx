@@ -5,14 +5,26 @@ import Price from "./component/Price";
 import Card from "react-bootstrap/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-
+import { useEffect, useState, useRef } from "react";
+import FirstName from "./component/FirstName";
 function App() {
+  const [first, setFirst] = useState("");
 
-  const firstName = "";
+
+
+  useEffect(() =>{
+    console.log(first)
+
+
+  
+
+  },[first])
+
+
 
   return (
     <>
-      <Card id="card"style={{ width: "22rem", lenght: "30rem"}}>
+      <Card id="card" style={{ width: "22rem", lenght: "30rem" }}>
         <Card.Body>
           <Card.Text>
             <Image />
@@ -22,9 +34,16 @@ function App() {
           </Card.Text>
         </Card.Body>
       </Card>
+      <input type="text" name="name" onChange={
+        (e)=>{
+          setFirst(e.currentTarget.value)
+        }
+      }></input>
 
-      <p>Hello, {firstName ? firstName : "there"} !</p>
-      {firstName && <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxTsDzMbjGaw66M1MY5IzBy0wgvUNQ16pCTvxyWfrPgQrlzv4Z9k_kXWm5YzM_cYv1og&usqp=CAU" alt="Your Image" />}
+      <FirstName props={first}/>
+
+      
+     
     </>
   );
 }
